@@ -1,0 +1,103 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: $containerDk;
+}
+
+.lang {
+    right: 0;
+    font-family: $arialFt;
+    color: $lightDk;
+}
+
+.container-left {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+}
+
+.container-right {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 50%;
+    background: url(../images/img-right.jpg) no-repeat 50% 50%;
+    background-size: 110%;
+    animation: animatedBackground1 6s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 5s;
+}
+
+@keyframes animatedBackground1 {
+    from {
+        background-size: 460%;
+    }
+    to {
+        background-size: 110%;
+    }
+}
+
+@keyframes animatedBackground3 {
+    from {
+        background-size: 460%;
+    }
+    to {
+        background-size: 165%;
+    }
+}
+
+.container-left-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(300px);
+    height: rem(400px);
+    background: url(../images/img-left.jpg) no-repeat 50% 50%;
+    background-size: 210%;
+    animation: animatedBackground2 6s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 5s;
+}
+
+@keyframes animatedBackground2 {
+    from {
+        background-size: 760%;
+    }
+    to {
+        background-size: 210%;
+    }
+}
+
+.left-img-cap {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+    font-family: $arialFt;
+    text-transform: uppercase;
+    color: $lightDk;
+    line-height: rem(24px);
+    
+    span {
+        font-style: italic;
+    }
+}
+
+
+.left-img-btn {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $cinzelFt;
+    background: $shade;
+}

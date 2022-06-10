@@ -1,0 +1,108 @@
+.social-media {
+    position: absolute;
+    bottom: 0;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 2em;
+        li {
+            padding: rem(10px) 0;
+            
+            a {
+                color: $shade;
+                transition: 0.3s all;
+                display: inline-block;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+
+.left-bottom-text {
+    position: absolute;
+    color: $grey;
+    font-size: rem(48px);
+    font-family: $cinzelFt;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: rem(20px);
+    bottom: 0;
+    right: 0;
+}
+
+.right-upper-text {
+    display: none;
+    position: absolute;
+    color: $red;
+    font-size: rem(48px);
+    font-family: $arialFt;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: rem(18px);
+    opacity: 0;
+    animation: blinker 1s linear infinite;
+    animation-delay: 10s;
+    
+    span {
+        font-style: italic;
+    }
+}
+@keyframes blinker {
+    50% {
+        opacity: 1;
+    }
+}
+
+.right-bottom-text {
+    position: absolute;
+    color: $white;
+    font-size: 48px;
+    font-family: $arialFt;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: rem(26px);
+    bottom: 0;
+}
+
+// responsive 
+@media (max-width: #{$breakpoint-lg - 1px}) {
+    .right-bottom-text,
+    .left-bottom-text {
+        font-size: rem(28px);
+    }
+    .right-upper-text {
+        font-size: rem(32px);
+    }
+}
+@media (max-width: #{$breakpoint-medi - 2px}) {
+    .container-left,
+    .container-right {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .container-right {
+        top: 100vh;
+        left: 0;
+        // background-size: cover;
+    }
+    
+    .left-img-btn,
+    .social-media {
+        display: none;
+    }
+    
+    
+}
+@media (max-width: #{$breakpoint-sm}) {
+    .container-right {
+        background-size: 165%;
+        animation: animatedBackground3 6s cubic-bezier(0.19, 1, 0.22, 1);
+        animation-delay: 5s;
+    }
+}
